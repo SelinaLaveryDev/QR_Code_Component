@@ -10,84 +10,109 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 ## Overview
+
+### The Brief
+
+Your challenge is to build out this QR code component and get it looking as close to the design as possible.
+
+You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+
+Download the starter code and go through the README.md file. This will provide further details about the project. The style-guide.md file is where you'll find colors, fonts, etc.
 
 ### Screenshot
 
 ![QR Code Component](https://sel-dev-bucket.s3.us-east-1.amazonaws.com/Frontend-mentor/Screenshot+2025-02-23+at+18.27.36.png)
 
+## Links
+View my solution [here](https://selinalaverydev.github.io/QR_Code_Component/)
+
 ## My process
 
 - Revised the instructions and design documents
 - Defined CSS variables for text presets set out in the figma file
--
+- Wrote up semantic HTML
+- Used flexbox for responsiveness
 
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
+I learned how quickly Figma can help define CSS variables for text presets.
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+:root {
+  /* colours */
+  --slate-900: #1f314f;
+  --slate-500: #68778d;
+  --slate-300: #d5e1ef;
+  --blue-600: #2c7dfa;
+  --blue-500: #3685ff;
+  --blue-400: #4d9ffc;
+  --white-100: #ffffff;
+
+  /* typography */
+  --font-outfit-bold: Outfit, sans-serif;
+  --font-outfit-regular: Outfit, sans-serif;
+
+  --text-outfit-bold-size: 22px;
+  --text-outfit-bold-line-height: 120%;
+  --text-outfit-bold-spacing: 0px;
+
+  --text-outfit-regular-size: 15px;
+  --text-outfit-regular-line-height: 140%;
+  --text-outfit-regular-spacing: 0.2px;
 }
 ```
+Created classes using the variables to match with the Figma design styles
+```classes
+.outfit-bold {
+  font-family: var(--font-outfit-bold);
+  font-size: var(--text-outfit-bold-size);
+  line-height: var(--text-outfit-bold-line-height);
+  letter-spacing: var(--text-outfit-bold-spacing);
+  color: var(--slate-900);
+  text-align: center;
+  margin-bottom: 16px;
+}
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+.outfit-regular {
+  font-family: var(--font-outfit-regular);
+  font-size: var(--text-outfit-regular-size);
+  line-height: var(--text-outfit-regular-line-height);
+  letter-spacing: var(--text-outfit-regular-spacing);
+  color: var(--slate-500);
+  text-align: center;
+}
+
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+Here, I used semantic HTML where I could for SEO
+```semantic HTML
+      <section class="container">
+```
+Initially I used a 'p' element, but realised that using an 'h1' helped match the brief more accurately
+```semantic HTML
+      <h1 class="outfit-bold">
+          Improve your front-end skills by building projects
+      </h1>
+```
+Used 'alt' attribute for accessibility and 'lazy loading' for the image to prevent slo page loading
+```accessibility
+        <img
+          src="./images/image-qr-code.png"
+          alt="QR code"
+          class="qr-code"
+          loading="lazy"
+        />
+```
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- [My Portfolio Website](https://selinalaverydev.github.io/selina-dev-portfolio/)
+- [My Frontend Mentor Profile](https://www.frontendmentor.io/profile/SelinaLaveryDev)
+- [My Github Profile](https://github.com/SelinaLaveryDev)
