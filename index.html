@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@100..900&family=Outfit:wght@100..900&family=Raleway+Dots&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@100..900&family=Outfit:wght@100..900&family=Raleway+Dots&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -18,22 +21,38 @@
     <title>Frontend Mentor | QR code component</title>
   </head>
   <body>
-    <div class="container"></div>
-    <header>
-      <section class="qr-image"></section>
-    </header>
-    Improve your front-end skills by building projects Scan the QR code to visit
-    Frontend Mentor and take your coding skills to the next level
+    <main>
+      <div class="container">
+        <img
+          src="./images/image-qr-code.png"
+          alt="QR code"
+          class="qr-code"
+          loading="lazy"
+        />
+        <div class="content">
+          <p class="outfit-bold">
+            Improve your front-end skills by building projects
+          </p>
+          <p class="outfit-regular">
+            Scan the QR code to visit Frontend Mentor and take your coding
+            skills to the next level
+          </p>
+        </div>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by
-      <a href="https://github.com/SelinaLaveryDev" target="_blank"
-        >SelinaLaveryDev</a
-      >.
-    </div>
-  </div>
+        <footer>
+          <div class="attribution">
+            Challenge by
+            <a
+              href="https://www.frontendmentor.io?ref=challenge"
+              target="_blank"
+              >Frontend Mentor</a
+            >. Coded by
+            <a href="https://github.com/SelinaLaveryDev" target="_blank"
+              >SelinaLaveryDev</a
+            >.
+          </div>
+        </footer>
+      </div>
+    </main>
   </body>
 </html>
